@@ -35,7 +35,7 @@ class NewVideoController implements Controller
                 $safeFileName = uniqid('upload_') . '_' . pathinfo($_FILES['image']['name'], PATHINFO_BASENAME);
                 move_uploaded_file(
                     $_FILES['image']['tmp_name'],
-                    __DIR__ . '/../../public/img/uploads/' . $safeFileName
+                    __DIR__ . '/../../public/img/uplouds/' . $safeFileName
                 );
                 $video->setFilePath($safeFileName);
             }
